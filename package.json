@@ -1,0 +1,31 @@
+{
+  "name": "node101",
+  "version": "1.0.0",
+  "description": "Create your first web api using node and deploy it to Azure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshramabathiran/Node101.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Rajesh Ramabathiran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajeshramabathiran/Node101/issues"
+  },
+  "homepage": "https://github.com/rajeshramabathiran/Node101#readme",
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.8",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
