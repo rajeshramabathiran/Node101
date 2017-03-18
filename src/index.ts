@@ -1,16 +1,8 @@
 import * as http from "http";
 import * as express from "express";
+import app from "./app";
 
-let app: express.Application = express();
 let port: number = 3000;
-app.set('port', port);
-
-let router = express.Router();
-router.get('/', (req, res, next) => {
-    res.send('Hello');
-})
-
-app.use('/', router);
 
 const server = http.createServer(app);
 server.listen(port);
