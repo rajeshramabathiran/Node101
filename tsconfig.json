@@ -4,7 +4,9 @@
         "target": "es6",
         "outDir": "dist",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "rootDir": "src"
     },
     "include": [
         "src/**/*.ts"
