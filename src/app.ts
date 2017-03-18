@@ -2,6 +2,7 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as methodOverride from "method-override";
 import { RegisterRoutes} from "./routes/routes";
+import * as path from "path";
 
 let app: express.Application = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,5 +16,9 @@ router.get('/', (req, res, next) => {
 })
 
 app.use('/', router);
+
+app.use('/swagger', (req, res) => {
+    res.sendFile(__dirname + '/swagger/swagger.json');
+});
 
 export default app;
