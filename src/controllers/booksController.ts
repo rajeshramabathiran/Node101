@@ -6,7 +6,8 @@ import { BooksDB } from "../utils/booksDB";
 export class BooksController {
     @Get()
     public getBooks(): Promise<Book[]> {
-        let connectionString: string = "mongodb://localhost/booksDB";
+        let connectionString: string = process.env.MONGODB_CONNECTIONSTRING ? process.env.MONGODB_CONNECTIONSTRING : "mongodb://localhost/booksDB";
+
         let booksDB: BooksDB = new BooksDB(connectionString);
         return new Promise<Book[]>( (resolve, reject) => {
             booksDB.getBooks().then(books => {
