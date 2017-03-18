@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.ts' ",
-    "start": "node ./dist/index.js"
+    "start": "node ./dist/index.js",
+    "swagger": "tsoa swagger",
+    "routes": "tsoa routes"
   },
   "repository": {
     "type": "git",
@@ -29,10 +31,14 @@
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "mocha": "^3.2.0",
+    "swagger-ts-generator": "^1.1.6",
     "typescript": "^2.2.1"
   },
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "swagger-ts": "0.0.21"
+    "method-override": "^2.3.7",
+    "swagger-ts": "0.0.21",
+    "tsoa": "^1.1.5"
   }
 }

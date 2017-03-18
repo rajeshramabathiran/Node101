@@ -1,6 +1,7 @@
 import * as http from "http";
 import * as express from "express";
 import app from "./app";
+import "./controllers/booksController";
 
 let port: number = 3000;
 

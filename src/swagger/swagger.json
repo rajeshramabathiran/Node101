@@ -1,0 +1,64 @@
+{
+	"basePath": "/",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"Book": {
+			"description": "",
+			"properties": {
+				"name": {
+					"type": "string",
+					"description": ""
+				},
+				"authorName": {
+					"type": "string",
+					"description": ""
+				}
+			},
+			"required": [
+				"name",
+				"authorName",
+				"name",
+				"authorName"
+			],
+			"type": "object"
+		}
+	},
+	"info": {
+		"description": "Create your first web api using node and deploy it to Azure",
+		"license": {
+			"name": "MIT"
+		},
+		"title": "node101",
+		"version": "1.0.0"
+	},
+	"paths": {
+		"/books": {
+			"get": {
+				"operationId": "BooksController-getBooks",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Book"
+							}
+						}
+					}
+				},
+				"description": "",
+				"parameters": []
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {}
+}
