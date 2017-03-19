@@ -13,15 +13,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 RegisterRoutes(app);
 
-// let router = express.Router();
-// router.get('/', (req, res, next) => {
-//     res.send('Welcome to Node 101 tutorial! Navigate to /api-docs for API usage.');
-// })
-
-// app.use('/', router);
-
 app.use('/swagger.json', express.static(__dirname + '/swagger/swagger.json'));
-//app.use('/docs', express.static(__dirname + '/swagger-ui'));
 
 app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerJSON));
 
