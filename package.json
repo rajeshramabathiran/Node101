@@ -9,7 +9,8 @@
     "swagger": "tsoa swagger",
     "routes": "tsoa routes",
     "postBuild": "cp -R src/swagger dist/",
-    "build": "gulp"
+    "build": "gulp",
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
