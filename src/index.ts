@@ -3,7 +3,7 @@ import * as express from "express";
 import app from "./app";
 import "./controllers/booksController";
 
-let port: number = 3000;
+let port: number = process.env.PORT ? process.env.PORT : 3000;
 
 const server = http.createServer(app);
 server.listen(port);
