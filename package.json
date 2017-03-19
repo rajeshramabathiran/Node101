@@ -8,7 +8,7 @@
     "start": "node ./dist/index.js",
     "swagger": "tsoa swagger",
     "routes": "tsoa routes",
-    "postBuild": "cp -R src/swagger-ui dist/ && cp -R src/swagger dist/"
+    "postBuild": "cp -R src/swagger dist/"
   },
   "repository": {
     "type": "git",
