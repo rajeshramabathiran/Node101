@@ -20,4 +20,4 @@ gulp.task('swagger', function() {
   .pipe(gulp.dest('dist/swagger'));
 });
 
-gulp.task('default', ['watch', 'swagger']);
+gulp.task('default', ['scripts', 'swagger']);
