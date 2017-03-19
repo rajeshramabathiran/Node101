@@ -38,7 +38,10 @@ export class BooksDB {
                 let books: Book[] = [];
                 collection.find().toArray().then(docs => {
                     docs.map((doc: Book) => {
-                        books.push(new Book(doc.name, doc.authorName));
+                        let book: Book = new Book();
+                        book.name = doc.name;
+                        book.authorName = doc.authorName;
+                        books.push(book);
                     })
                     resolve(books);
                 }).catch(error => {

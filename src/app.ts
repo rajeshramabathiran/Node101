@@ -12,13 +12,12 @@ RegisterRoutes(app);
 
 let router = express.Router();
 router.get('/', (req, res, next) => {
-    res.send('Hello World');
+    res.send('Welcome to Node 101 tutorial! Navigate to /docs for API usage.');
 })
 
 app.use('/', router);
 
-app.use('/swagger', (req, res) => {
-    res.sendFile(__dirname + '/swagger/swagger.json');
-});
+app.use('/swagger.json', express.static(__dirname + '/swagger/swagger.json'));
+app.use('/docs', express.static(__dirname + '/swagger-ui'));
 
 export default app;
