@@ -1,7 +1,10 @@
-FROM nodesource/node
-# COPY package.json package.json
-COPY . .
+FROM node:latest
+
+RUN mkdir -p /usr/src/app  
+WORKDIR /usr/src/app  
+COPY . /usr/src/app
+
+EXPOSE 3000  
 RUN npm install
-RUN npm run build
-EXPOSE 3000
-CMD [ "node", "dist/index.js" ]
+RUN npm run build  
+CMD ["node", "dist/index.js"] 
