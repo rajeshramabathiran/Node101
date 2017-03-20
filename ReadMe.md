@@ -1,5 +1,7 @@
 # Node 101
 
+[![Build Status](https://travis-ci.org/rajeshramabathiran/Node101.svg?branch=master)](https://travis-ci.org/rajeshramabathiran/Node101)
+
 This repository contains code samples that will help you
 
 - Get started with node
