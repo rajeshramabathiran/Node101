@@ -3,6 +3,7 @@ node_js:
   - '4.6.1'
 before_install:
   - npm install -g npm
+  - npm install -g ts-node
 before_script:
   - npm install
   - npm run build
