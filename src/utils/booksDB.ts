@@ -1,7 +1,7 @@
 import * as util from "util";
 import * as mongodb from "mongodb";
 import { MongoClient } from "mongodb";
-import { Book } from "../models/Book";
+import { Book } from "../models/book";
 
 export class BooksDB {
     private mongodbClient: MongoClient;
