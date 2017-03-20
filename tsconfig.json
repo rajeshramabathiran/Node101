@@ -5,8 +5,8 @@
         "outDir": "dist",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "sourceMap": true,
-        "rootDir": "src"
+        "sourceMap": true //,
+        //"rootDir": "src"
     },
     "include": [
         "src/**/*.ts"
