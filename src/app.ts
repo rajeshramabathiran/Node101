@@ -14,7 +14,10 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 RegisterRoutes(app);
 
-appInsights.setup().start();
+if(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
+{
+    appInsights.setup().start();
+}
 
 app.use('/swagger.json', express.static(__dirname + '/swagger/swagger.json'));
 
